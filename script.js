@@ -48,9 +48,19 @@ const playAudio= () => {
 const pauseAudio=()=>{
     player.pause()
 }
+
 //Slider
 const slider=document.getElementById('volumeSlider')
 slider.oninput=(e)=>{
     const volume=e.target.value
     player.volume=volume
+}
+
+//Update progress
+const updateProgress=()=>{
+    if(player.currentTime>0){
+        const progressBar=document.getElementById('progress')
+        progressBar.value=(player.currentTime/player.duration)*100
+
+    } 
 }
