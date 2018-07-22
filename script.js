@@ -33,8 +33,8 @@ songList.onclick=(e)=>{
     const source=document.getElementById('source')
     source.src='songs/' + clickedItem.innerText
 
-    document.getElementById('currentlyPlayingSong').innerText="currentlyPlayingSong"
-    document.getElementById('currentSong').innerText=clickedItem.innerText
+    document.getElementById('currentlyPlayingSong').innerText="Currently playing: "
+   document.getElementById('currentSong').innerText=clickedItem.innerText
     
     player.load()
     player.play()
